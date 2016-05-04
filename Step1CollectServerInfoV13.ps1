@@ -318,7 +318,7 @@ Process
         # Collect C:\Program Files (x86)\ILG\Transitmaster information and convert to HTML fragment
         #---------------------------------------------------------------------
 
-        $subhead = "<h3>C:\Program Files (x86)\ILG\TransitMaster*.exe Version information</h3>"
+        $subhead = "<h3>C:\Program Files (x86)\ILG\TransitMaster*.exe and dll Version information</h3>"
         $htmlbody += $subhead
  
         Write-Verbose "Collecting C:\Program Files (x86)\ILG\Transitmaster*.exe and .dll Version information"
@@ -326,7 +326,7 @@ Process
         try
         {
             #$software = Get-WmiObject Win32_Product -ComputerName $ComputerName -ErrorAction STOP | Select-Object Vendor,Name,Version | Sort-Object Vendor,Name
-            $software = Get-ChildItem C:\Program Files (x86)\ILG\Transitmaster\*.exe, C:\Program Files (x86)\ILG\Transitmaster\*.dll | Select-Object -ExpandProperty VersionInfo | Select-Object -Property FileName, Productversion, ProductName | Sort-Object FileName
+            $software = Get-ChildItem -path 'C:\Program Files (x86)\ILG\Transitmaster' -recurse -Include *.exe, *.dll | Select-Object -ExpandProperty VersionInfo | Select-Object -Property FileName, Productversion, ProductName | Sort-Object FileName
         
             $htmlbody += $software | ConvertTo-Html -Fragment
             $htmlbody += $spacer 
