@@ -1,7 +1,7 @@
 ﻿#####################################################################
-###   Step4AppServerPatch.ps1                                     ###
+###   Step6WorkstationPatch.ps1                                   ###
 ###   By: Adam Hoge - Trapeze Project Engineer                    ###
-###   This is a script to help me install a TM Fixed patch        ###
+###   Copy files from the patch directory to C:\transitmaster     ###
 ###   It's not perfect, but I like it.                            ###
 #####################################################################
 

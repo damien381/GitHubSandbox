@@ -1,4 +1,11 @@
-﻿<#
+﻿#####################################################################
+###   Step1CollectServerInfoV13.ps1                               ###
+###   By: Adam Hoge - Trapeze Project Engineer                    ###
+###   Information Gathering script to get non DB releated data    ###
+###   V13 ande earlier Because ILG\TransitMaster                  ###
+###   It's not perfect, but I like it.                            ###
+#####################################################################
+<#
 .SYNOPSIS
 Collect-ServerInfo.ps1 - PowerShell script to collect information about Windows servers
 

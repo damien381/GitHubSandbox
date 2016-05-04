@@ -1,4 +1,10 @@
-﻿########################################################
+﻿#####################################################################
+###   Step2TMBackup.ps1                                           ###
+###   By: Adam Hoge - Trapeze Project Engineer                    ###
+###   Create a Backup for C:\TransitMaster and ILG\Transitmaster  ###
+###   It's not perfect, but I like it.                            ###
+#####################################################################
+# This is the original script that I started with.
 # Name: BackupScript.ps1                              
 # Creator: Michael Seidl aka Techguy                    
 # CreationDate: 21.01.2014                              
@@ -50,7 +56,7 @@ $Versions="50" #How many of the last Backups you want to keep
 $Dir1transitmaster="C:\TransitMaster"
 $Dir2wwwroot= "C:\inetpub\WWWroot"
 $Dir3ProgDataTM=  "C:\ProgramData\TransitMaster"
-$BackupDirs="C:\TransitMaster", "C:\temp\ProgData_Transitmaster","C:\inetpub\WWWroot" #What Folders you want to backup
+$BackupDirs="C:\TransitMaster", "C:\temp\ProgData_Transitmaster","C:\inetpub\WWWroot", "C:\Program Files (x86)\ILG\Transitmaster" #What Folders you want to backup
 $Log="Log.txt" #Log Name
 $LoggingLevel="3" #LoggingLevel only for Output in Powershell Window, 1=smart, 3=Heavy
 

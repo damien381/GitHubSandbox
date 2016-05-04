@@ -1,4 +1,10 @@
-﻿<#
+﻿#####################################################################
+###   Step1CollectServerInfo.ps1                                  ###
+###   By: Adam Hoge - Trapeze Project Engineer                    ###
+###   Information Gathering script to get non DB releated data    ###
+###   It's not perfect, but I like it.                            ###
+#####################################################################
+<#
 .SYNOPSIS
 Collect-ServerInfo.ps1 - PowerShell script to collect information about Windows servers
 
@@ -326,7 +332,7 @@ Process
         try
         {
             #$software = Get-WmiObject Win32_Product -ComputerName $ComputerName -ErrorAction STOP | Select-Object Vendor,Name,Version | Sort-Object Vendor,Name
-            $software = Get-ChildItem c:\transitmaster\*.exe, c:\transitmaster\*.dll | Select-Object -ExpandProperty VersionInfo | Select-Object -Property FileName, Productversion, ProductName | Sort-Object FileName
+            $software = Get-ChildItem c:\transitmaster -recurse -Include *.exe, *.dll | Select-Object -ExpandProperty VersionInfo | Select-Object -Property FileName, Productversion, ProductName | Sort-Object FileName
         
             $htmlbody += $software | ConvertTo-Html -Fragment
             $htmlbody += $spacer 
