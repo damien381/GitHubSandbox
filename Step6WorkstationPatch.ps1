@@ -23,7 +23,7 @@ Function pause ($message)
 
 #Setup where the software is at and where it is going
 
-$SourcePath="Z:\Software\22S2000-015 Gen II Release v15.1.4.2 (04-26-2016)"
+$SourcePath="C:\TM_Backup\Software\22S2000-015 Gen II Release v15.1.4.2 (04-26-2016)"
 $DestPath="C:\Transitmaster"
 
 # I search for any MSI files and install them if they need them
